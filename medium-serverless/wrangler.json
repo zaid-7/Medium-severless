@@ -1,0 +1,36 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "medium-serverless",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-08",
+  "vars": {
+    "DATABASE_URL" : "prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiNDhlODM5YjctZmU2Zi00ZjE5LThmZDktODE2ODJlNGFmNjRlIiwidGVuYW50X2lkIjoiOTM5ZDE4ZjUwOTJlNDU0ZDY2OGY5NzMyYWE2N2ZlNjEwZmY5Mjg1OTIxNjM1ODVmZTNjM2U5ODk0NjZiY2Y4ZCIsImludGVybmFsX3NlY3JldCI6IjYwNGU0OWYxLWViYmEtNDk3MS04YThiLWNlMGE5MTg0ZTBhOCJ9.2L3rDEob7_MXKSli32tNmipf6JnEu_B7Xu7wE_XgPFg",
+    "JWT_SECRET" : "zaidsecret"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "MY_KV_NAMESPACE",
+      "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MY_BUCKET",
+      "bucket_name": "my-bucket"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "MY_DB",
+      "database_name": "my-database",
+      "database_id": ""
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}
